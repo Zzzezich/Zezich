@@ -29,23 +29,104 @@ public class FirstTest {
     }
 
     @Test
-    public void firstPayman() {
+    public void firstPayment () {
         WebElement cardNumber = driver.findElement(By.id("input-card-number"));
         cardNumber.sendKeys("4000000000000002");
         WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
         cardHolder.sendKeys("Ci Von");
         WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
         Select selectM = new Select(selectMonth);
-        selectM.selectByVisibleText("02");
+        selectM.selectByVisibleText("06");
         WebElement selectYear = driver.findElement(By.id("card-expires-year"));
         Select selectY = new Select(selectYear);
-        selectY.selectByVisibleText("2033");
+        selectY.selectByVisibleText("2038");
         WebElement CVV = driver.findElement(By.id("input-card-cvc"));
         CVV.sendKeys("123");
         WebElement PayButton = driver.findElement(By.id("action-submit"));
         PayButton.click();
-
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        WebElement Success = driver.findElement(By.id("success"));
+        Success.submit();
     }
 
+    @Test
+    public void secondPayment () {
+        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
+        cardNumber.sendKeys("5555555555554444");
+        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
+        cardHolder.sendKeys("Ci Von");
+        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
+        Select selectM = new Select(selectMonth);
+        selectM.selectByVisibleText("06");
+        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
+        Select selectY = new Select(selectYear);
+        selectY.selectByVisibleText("2038");
+        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
+        CVV.sendKeys("123");
+        WebElement PayButton = driver.findElement(By.id("action-submit"));
+        PayButton.click();
+        WebElement Success = driver.findElement(By.id("success"));
+        Success.submit();
+        WebElement Question = driver.findElement(By.id("success"));
+        Success.submit();
+
+
+    }
+
+    @Test
+    public void thirdPayment () {
+        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
+        cardNumber.sendKeys("4000000000000044");
+        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
+        cardHolder.sendKeys("Ci Von");
+        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
+        Select selectM = new Select(selectMonth);
+        selectM.selectByVisibleText("06");
+        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
+        Select selectY = new Select(selectYear);
+        selectY.selectByVisibleText("2038");
+        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
+        CVV.sendKeys("123");
+        WebElement PayButton = driver.findElement(By.id("action-submit"));
+        PayButton.click();
+        WebElement Success = driver.findElement(By.id("success"));
+        Success.submit();
+    }
+
+    @Test
+    public void fourthPayment () {
+        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
+        cardNumber.sendKeys("4000000000000093");
+        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
+        cardHolder.sendKeys("Ci Von");
+        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
+        Select selectM = new Select(selectMonth);
+        selectM.selectByVisibleText("06");
+        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
+        Select selectY = new Select(selectYear);
+        selectY.selectByVisibleText("2038");
+        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
+        CVV.sendKeys("123");
+        WebElement PayButton = driver.findElement(By.id("action-submit"));
+        PayButton.click();
+        WebElement Success = driver.findElement(By.id("success"));
+        Success.submit();
+    }
+
+    @Test
+    public void FivethPayment () {
+        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
+        cardNumber.sendKeys("5555555555554444");
+        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
+        cardHolder.sendKeys("Ci Von");
+        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
+        Select selectM = new Select(selectMonth);
+        selectM.selectByVisibleText("06");
+        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
+        Select selectY = new Select(selectYear);
+        selectY.selectByVisibleText("2038");
+        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
+        CVV.sendKeys("123");
+        WebElement Question = driver.findElement(By.id("cvc-hint-toggle"));
+        Question.click();
+    }
 }
