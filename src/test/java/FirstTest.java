@@ -6,8 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import static org.junit.Assert.assertTrue;
 
 public class FirstTest {
     public static WebDriver driver;
@@ -29,104 +38,54 @@ public class FirstTest {
     }
 
     @Test
-    public void firstPayment () {
+    public void firstPayment () throws IOException {
+        String currency = driver.findElement(By.id("currency")).getText();
+        String totalAmount = driver.findElement(By.id("total-amount")).getText();
+        String orderNumber = driver.findElement(By.id("order-number")).getText();
         WebElement cardNumber = driver.findElement(By.id("input-card-number"));
         cardNumber.sendKeys("4000000000000002");
         WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
         cardHolder.sendKeys("Ci Von");
         WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
         Select selectM = new Select(selectMonth);
-        selectM.selectByVisibleText("06");
+        selectM.selectByVisibleText("02");
         WebElement selectYear = driver.findElement(By.id("card-expires-year"));
         Select selectY = new Select(selectYear);
-        selectY.selectByVisibleText("2038");
+        selectY.selectByVisibleText("2033");
         WebElement CVV = driver.findElement(By.id("input-card-cvc"));
         CVV.sendKeys("123");
         WebElement PayButton = driver.findElement(By.id("action-submit"));
         PayButton.click();
-        WebElement Success = driver.findElement(By.id("success"));
-        Success.submit();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebElement successButton = driver.findElement(By.id("success"));
+        successButton.submit();
+        WebElement Page = driver.findElement(By.id("main-container"));
+
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+                .coordsProvider(new WebDriverCoordsProvider())
+                .takeScreenshot(driver, Page);
+
+        ImageIO.write(screenshot.getImage(), "jpg", new File("C:\\Users\\Professional\\Desktop\\Lessons_IT\\google-logo.png"));
+        assertTrue(new File("C:\\Users\\Professional\\Desktop\\Lessons_IT\\google-logo.png").exists());
+
+        String paymentStatusTitleActual = driver.findElement(By.id("payment-status-title")).getText();
+        String paymentStatusTitleExpected = "Success";
+        Assert.assertEquals("Statuses do not match", paymentStatusTitleExpected,paymentStatusTitleActual);
+        String paymentStatusActual = driver.findElement(By.id("payment-item-status")).getText();
+        String paymentStatusExpected = "Payment status Confirmed";
+        Assert.assertEquals("Statuses do not match", paymentStatusExpected,paymentStatusActual);
+        String orderNumberActual = driver.findElement(By.id("payment-item-ordernumber")).getText();
+        String orderNumberExpected = "Order number "+orderNumber;
+        Assert.assertEquals("Statuses do not match", orderNumberExpected,orderNumberActual);
+        String CurrencyActual = driver.findElement(By.xpath("//div[@id='payment-item-total']")).getText();
+        String CurrencyExpected = "Total amount "+currency+"   "+totalAmount;
+        Assert.assertEquals("Statuses do not match", CurrencyExpected,CurrencyActual);
+        String totalAmountActual = driver.findElement(By.id("payment-item-total-amount")).getText();
+        Assert.assertEquals("Statuses do not match", totalAmount,totalAmountActual);
     }
 
-    @Test
-    public void secondPayment () {
-        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
-        cardNumber.sendKeys("5555555555554444");
-        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
-        cardHolder.sendKeys("Ci Von");
-        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
-        Select selectM = new Select(selectMonth);
-        selectM.selectByVisibleText("06");
-        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
-        Select selectY = new Select(selectYear);
-        selectY.selectByVisibleText("2038");
-        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
-        CVV.sendKeys("123");
-        WebElement PayButton = driver.findElement(By.id("action-submit"));
-        PayButton.click();
-        WebElement Success = driver.findElement(By.id("success"));
-        Success.submit();
-        WebElement Question = driver.findElement(By.id("success"));
-        Success.submit();
-
-
-    }
-
-    @Test
-    public void thirdPayment () {
-        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
-        cardNumber.sendKeys("4000000000000044");
-        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
-        cardHolder.sendKeys("Ci Von");
-        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
-        Select selectM = new Select(selectMonth);
-        selectM.selectByVisibleText("06");
-        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
-        Select selectY = new Select(selectYear);
-        selectY.selectByVisibleText("2038");
-        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
-        CVV.sendKeys("123");
-        WebElement PayButton = driver.findElement(By.id("action-submit"));
-        PayButton.click();
-        WebElement Success = driver.findElement(By.id("success"));
-        Success.submit();
-    }
-
-    @Test
-    public void fourthPayment () {
-        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
-        cardNumber.sendKeys("4000000000000093");
-        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
-        cardHolder.sendKeys("Ci Von");
-        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
-        Select selectM = new Select(selectMonth);
-        selectM.selectByVisibleText("06");
-        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
-        Select selectY = new Select(selectYear);
-        selectY.selectByVisibleText("2038");
-        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
-        CVV.sendKeys("123");
-        WebElement PayButton = driver.findElement(By.id("action-submit"));
-        PayButton.click();
-        WebElement Success = driver.findElement(By.id("success"));
-        Success.submit();
-    }
-
-    @Test
-    public void FivethPayment () {
-        WebElement cardNumber = driver.findElement(By.id("input-card-number"));
-        cardNumber.sendKeys("5555555555554444");
-        WebElement cardHolder = driver.findElement(By.id("input-card-holder"));
-        cardHolder.sendKeys("Ci Von");
-        WebElement selectMonth = driver.findElement(By.id("card-expires-month"));
-        Select selectM = new Select(selectMonth);
-        selectM.selectByVisibleText("06");
-        WebElement selectYear = driver.findElement(By.id("card-expires-year"));
-        Select selectY = new Select(selectYear);
-        selectY.selectByVisibleText("2038");
-        WebElement CVV = driver.findElement(By.id("input-card-cvc"));
-        CVV.sendKeys("123");
-        WebElement Question = driver.findElement(By.id("cvc-hint-toggle"));
-        Question.click();
-    }
 }
+
+
+
+
