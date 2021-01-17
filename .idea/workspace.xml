@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7fbec850-aa39-4eec-bbf0-f7052aac4e6d" name="Default Changelist" comment="Second commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/FivethTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FourthTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SecondTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ThirdTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FirstTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lri7vJw7AUDQtV446pt7YkhUSY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.Test.openPage">
+    <configuration name="FirstTest.firstPayment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardPay" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="firstPayment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourthTest.fourthPayment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardPay" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FourthTest" />
+      <option name="METHOD_NAME" value="fourthPayment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SecondTest.secondPayment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardPay" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SecondTest" />
+      <option name="METHOD_NAME" value="secondPayment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.openPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardPay" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="openPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThirdTest.thirdPayment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CardPay" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ThirdTest" />
+      <option name="METHOD_NAME" value="thirdPayment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Test.openPage" />
+        <item itemvalue="JUnit.FirstTest.firstPayment" />
+        <item itemvalue="JUnit.SecondTest.secondPayment" />
+        <item itemvalue="JUnit.FourthTest.fourthPayment" />
+        <item itemvalue="JUnit.ThirdTest.thirdPayment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fbec850-aa39-4eec-bbf0-f7052aac4e6d" name="Default Changelist" comment="" />
+      <created>1608361447081</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608361447081</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit Practic_3">
+      <created>1608362491191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608362491191</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Second commit">
+      <created>1608377001178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608377001178</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Third commit">
+      <created>1608391470221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608391470221</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit Practic_3" />
+    <MESSAGE value="Second commit" />
+    <MESSAGE value="Third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Third commit" />
+  </component>
+</project>
