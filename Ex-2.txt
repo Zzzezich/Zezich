@@ -1,4 +1,4 @@
-1. 
+1. https://app.everyqa.io/overview/manage/repository/28cb71fc-443a-11eb-b6bb-d00d7cc42edb
 
 
 2. http://89.223.126.182:8081/issues?q=project:%20%7B%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%20%D1%81%20%D0%BD%D0%B0%D0%BF%D0%B8%D1%82%D0%BA%D0%B0%D0%BC%D0%B8%7D
